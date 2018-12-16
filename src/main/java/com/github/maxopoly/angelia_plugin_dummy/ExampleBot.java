@@ -1,53 +1,30 @@
 package com.github.maxopoly.angelia_plugin_dummy;
 
 import com.github.maxopoly.angeliacore.connection.ServerConnection;
+import com.github.maxopoly.angeliacore.libs.yaml.config.PluginConfig;
+import com.github.maxopoly.angeliacore.plugin.AngeliaLoad;
 import com.github.maxopoly.angeliacore.plugin.AngeliaPlugin;
-import java.util.List;
-import java.util.Map;
-import org.apache.commons.cli.Option;
-import org.kohsuke.MetaInfServices;
+import org.apache.logging.log4j.Logger;
 
-@MetaInfServices(AngeliaPlugin.class)
+@AngeliaLoad(name = "ExampleBot", version = "1.0")
 public class ExampleBot extends AngeliaPlugin {
 
-    public ExampleBot() {
-        super("ExampleBot");
-    }
+	@Override
+	public void start() {
+		// showcasing commonly needed objects and how to get them:
 
-    @Override
-    public void start() {
-        // TODO Auto-generated method stub
+		// holds everything about the current connection
+		ServerConnection connection = this.connection;
+		// logger, use this instead of System.out
+		Logger logger = connection.getLogger();
+		// autoloaded yaml flatfile config
+		PluginConfig config = getConfig();
 
-    }
+	}
 
-    @Override
-    public String getHelp() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    protected List<Option> createOptions() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    protected void parseOptions(ServerConnection connection, Map<String, List<String>> args) {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void tearDown() {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public AngeliaPlugin transistionToNewConnection(ServerConnection newConnection) {
-        // TODO Auto-generated method stub
-        return null;
-    }
+	@Override
+	public void stop() {
+		
+	}
 
 }

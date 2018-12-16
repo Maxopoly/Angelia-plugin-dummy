@@ -20,18 +20,7 @@
 		<dependency>
 			<groupId>com.github.maxopoly</groupId>
 			<artifactId>angelia-core</artifactId>
-			<version>1.0.03</version>
-		</dependency>
-		<dependency>
-			<groupId>org.kohsuke.metainf-services</groupId>
-			<artifactId>metainf-services</artifactId>
-			<version>1.7</version>
-			<optional>true</optional>
-		</dependency>
-				<dependency>
-			<groupId>org.json</groupId>
-			<artifactId>json</artifactId>
-			<version>20160810</version>
+			<version>1.0.09</version>
 		</dependency>
 	</dependencies>
 </project>
