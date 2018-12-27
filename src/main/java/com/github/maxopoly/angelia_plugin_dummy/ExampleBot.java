@@ -1,10 +1,11 @@
 package com.github.maxopoly.angelia_plugin_dummy;
 
+import org.apache.logging.log4j.Logger;
+
 import com.github.maxopoly.angeliacore.connection.ServerConnection;
 import com.github.maxopoly.angeliacore.libs.yaml.config.PluginConfig;
 import com.github.maxopoly.angeliacore.plugin.AngeliaLoad;
 import com.github.maxopoly.angeliacore.plugin.AngeliaPlugin;
-import org.apache.logging.log4j.Logger;
 
 @AngeliaLoad(name = "ExampleBot", version = "1.0")
 public class ExampleBot extends AngeliaPlugin {
@@ -24,7 +25,7 @@ public class ExampleBot extends AngeliaPlugin {
 
 	@Override
 	public void stop() {
-		
+
 	}
 
 }
