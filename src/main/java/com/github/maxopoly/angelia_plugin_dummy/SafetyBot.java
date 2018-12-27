@@ -14,6 +14,7 @@ import com.github.maxopoly.angeliacore.event.events.HungerChangeEvent;
 import com.github.maxopoly.angeliacore.event.events.PlayerSpawnEvent;
 import com.github.maxopoly.angeliacore.plugin.AngeliaLoad;
 import com.github.maxopoly.angeliacore.plugin.AngeliaPlugin;
+import com.github.maxopoly.angeliacore.plugin.parameter.LoadPolicy;
 import com.github.maxopoly.angeliacore.plugin.parameter.ParameterLoad;
 
 /**
@@ -27,7 +28,7 @@ import com.github.maxopoly.angeliacore.plugin.parameter.ParameterLoad;
 @AngeliaLoad(name = "SafetyBot", version = "1.0")
 public class SafetyBot extends AngeliaPlugin implements AngeliaListener {
 
-	@ParameterLoad
+	@ParameterLoad(configId="allowedPlayers")
 	private String allowedPlayers;
 	private Set<String> allowedPlayerSet;
 
