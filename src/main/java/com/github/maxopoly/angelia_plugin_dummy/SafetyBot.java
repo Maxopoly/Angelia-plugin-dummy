@@ -69,8 +69,8 @@ public class SafetyBot extends AngeliaPlugin implements AngeliaListener {
 
 	@AngeliaEventHandler
 	public void playerNearby(PlayerSpawnEvent e) {
-		if (e.getOnlinePlayer() != null) {
-			if (allowedPlayers.contains(e.getOnlinePlayer().getName().toLowerCase())) {
+		if (e.getOnlinePlayer() != null && e.getOnlinePlayer().getName() != null) {
+			if (allowedPlayerSet.contains(e.getOnlinePlayer().getName().toLowerCase())) {
 				connection.getLogger().info(e.getOnlinePlayer().getName()
 						+ " entered radar distance, but he is whitelisted, so ignoring it");
 				return;
